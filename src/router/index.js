@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/home'
 Vue.use(Router)
 
 let routes = [{
@@ -19,7 +18,13 @@ let routes = [{
 	path: '/login',
 	component: resolve => require(['@/pages/login.vue'], resolve)
 }]
-
+//let routes = [{
+//	path: '/centerLogin',
+//	component: resolve => require(['@/pages/callcenter/login.vue'], resolve)
+//},{
+//	path: '/fillorder',
+//	component: resolve => require(['@/pages/callcenter/fillOrder.vue'], resolve)
+//}]
 
 var router = new Router({
 //	mode: 'history',
@@ -32,15 +37,15 @@ var router = new Router({
 	//这个因为有路由动画可能用不了
 	//https://router.vuejs.org/zh-cn/advanced/scroll-behavior.html
 	scrollBehavior (to, from, savedPosition) {
-	  return new Promise ((resolve,reject) => {
-	  	setTimeout(() => {
-		  if (savedPosition) {
-		    resolve(savedPosition);
-		  } else {
-		    resolve({ x: 0, y: 0 });
-		  }	
-	  	}, 500)
-	  })	  	
+//	  return new Promise ((resolve,reject) => {
+//	  	setTimeout(() => {
+//		  if (savedPosition) {
+//		    resolve(savedPosition);
+//		  } else {
+//		    resolve({ x: 0, y: 0 });
+//		  }	
+//	  	}, 500)
+//	  })	  	
 	}
 })
 export default router;

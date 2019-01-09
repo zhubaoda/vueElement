@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import axios from 'axios'
 import router from './router'
+import store from '@/store'
 import ElementUI from 'element-ui'
+import '@/assets/icon/loginicon/iconfont.css'
+import '@/assets/icon/twoicon/iconfont.css'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/style/main.css'
 Vue.config.productionTip = false
@@ -22,6 +25,7 @@ axios.interceptors.response.use( response => {
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
